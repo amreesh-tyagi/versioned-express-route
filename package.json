@@ -1,5 +1,5 @@
 {
-  "name": "versioned-express-routes",
+  "name": "versioned-express-route",
   "version": "0.0.1",
   "description": "Mount versioned routes on an express app.",
   "main": "lib/routes.js",
