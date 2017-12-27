@@ -1,0 +1,53 @@
+{
+  "name": "versioned-express-routes",
+  "version": "0.0.1",
+  "description": "Mount versioned routes on an express app.",
+  "main": "lib/routes.js",
+  "scripts": {
+    "test": "istanbul cover --print both nodeunit ./test/index.js",
+    "lint": "eslint .",
+    "coverage": "istanbul check-coverage --statements 100 --lines 100 --branches 100 --functions 100",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amreesh-tyagi/versioned-express-route.git"
+  },
+  "keywords": [
+    "express",
+    "router",
+    "version"
+  ],
+  "author": "Amreesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amreesh-tyagi/versioned-express-route/issues"
+  },
+  "homepage": "https://github.com/amreesh-tyagi/versioned-express-route",
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.1.0",
+    "express": "^4.14.0",
+    "express-request-version": "^2.1.1",
+    "ghooks": "^2.0.0",
+    "istanbul": "^0.4.4",
+    "nodeunit": "^0.11.0",
+    "semantic-release": "^7.0.1",
+    "supertest": "^3.0.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  },
+  "peerDependencies": {
+    "express": "^4.14.0"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
