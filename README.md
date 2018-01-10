@@ -20,4 +20,4 @@ app.use('/', versionRoutes(
   ['v1', 'v1.1', 'v2']
 ));
 ```
-Ref: A fork with fix of https://github.com/elliotttf/express-versioned-routes
+Ref: A fork(with a fix) of https://github.com/elliotttf/express-versioned-routes
